@@ -99,7 +99,6 @@ cdef extern from "rocksdb/options.h" namespace "rocksdb":
         cpp_bool verify_checksums_in_compaction
         CompactionStyle compaction_style
         CompactionOptionsUniversal compaction_options_universal
-        cpp_bool filter_deletes
         uint64_t max_sequential_skip_in_iterations
         shared_ptr[MemTableRepFactory] memtable_factory
         shared_ptr[TableFactory] table_factory

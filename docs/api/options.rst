@@ -603,16 +603,6 @@ Options object
             opts = rocksdb.Options()
             opts.compaction_options_universal = {'stop_style': 'similar_size'}
 
-    .. py:attribute:: filter_deletes
-
-        Use KeyMayExist API to filter deletes when this is true.
-        If KeyMayExist returns false, i.e. the key definitely does not exist, then
-        the delete is a noop. KeyMayExist only incurs in-memory look up.
-        This optimization avoids writing the delete to storage when appropriate.
-         
-        | *Type:* ``bool``
-        | *Default:* ``False``
-
     .. py:attribute:: max_sequential_skip_in_iterations
 
         An iteration->Next() sequentially skips over keys with the same

@@ -1137,12 +1137,6 @@ cdef class Options(object):
                 else:
                     raise Exception("Unknown compaction style")
 
-    property filter_deletes:
-        def __get__(self):
-            return self.opts.filter_deletes
-        def __set__(self, value):
-            self.opts.filter_deletes = value
-
     property max_sequential_skip_in_iterations:
         def __get__(self):
             return self.opts.max_sequential_skip_in_iterations
