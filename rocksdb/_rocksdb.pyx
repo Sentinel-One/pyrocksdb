@@ -868,30 +868,6 @@ cdef class Options(object):
         def __set__(self, value):
             self.opts.max_bytes_for_level_multiplier_additional = value
 
-    property expanded_compaction_factor:
-        def __get__(self):
-            return self.opts.expanded_compaction_factor
-        def __set__(self, value):
-            self.opts.expanded_compaction_factor = value
-
-    property source_compaction_factor:
-        def __get__(self):
-            return self.opts.source_compaction_factor
-        def __set__(self, value):
-            self.opts.source_compaction_factor = value
-
-    property max_grandparent_overlap_factor:
-        def __get__(self):
-            return self.opts.max_grandparent_overlap_factor
-        def __set__(self, value):
-            self.opts.max_grandparent_overlap_factor = value
-
-    property disable_data_sync:
-        def __get__(self):
-            return self.opts.disableDataSync
-        def __set__(self, value):
-            self.opts.disableDataSync = value
-
     property use_fsync:
         def __get__(self):
             return self.opts.use_fsync
@@ -1011,12 +987,6 @@ cdef class Options(object):
             return self.opts.purge_redundant_kvs_while_flush
         def __set__(self, value):
             self.opts.purge_redundant_kvs_while_flush = value
-
-    property allow_os_buffer:
-        def __get__(self):
-            return self.opts.allow_os_buffer
-        def __set__(self, value):
-            self.opts.allow_os_buffer = value
 
     property allow_mmap_reads:
         def __get__(self):
